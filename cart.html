@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - WanTo Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/20230420_102349.png" width="150px">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="Aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart-38.png" width="35px" height="25px"></a> 
+            <img src="images/menu-icon-24.png" class="menu-icon" onclick="menuToggle()">
+        </div>
+    </div>
+<!-------cart items details----->
+     <div class="small-container cart-page">
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/5.jpg" width="200px">
+                        <div>
+                            <p>Polo</p>
+                            <small>Price: 899.99</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>P899.99</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/9.jpg" width="200px">
+                        <div>
+                            <p>Trouser</p>
+                            <small>Price: 999.99</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>P999.99</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/10.jpg" width="200px">
+                        <div>
+                            <p>Airmax</p>
+                            <small>Price: 8999.99</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>P8999.99</td>
+            </tr>
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>P899.99</td>
+                </tr>
+                <tr>
+                    <td>Shipping Fee</td>
+                    <td>P150.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>P1049.99</td>
+                </tr>
+            </table>
+        </div>
+ <!--------popup------>
+        <div class="container-popup">
+            <a href="payment.html"><button type="submit" class="btn1" onclick="openPopup()">Submit</button></a> 
+            <div class="pop-up" id="popup">
+                <img src="images/Flat_tick_icon.svg.png" width="100px">
+                <h2>Thank You</h2>
+                <p>Your order has been successful. Thank you for choosing WanTo products.</p>
+                <button type="button"><a href="index.html" onclick="closePopup()">OK</button></a>
+            </div>
+          </div>
+     </div>
+<!------js for popup---->
+     <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+     </script>
+<!-------- footer -------->
+     <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download our app for android and ios mobile devices.</p>
+                    <div class="app-logo">
+                        <img src="images/footer1.jpg">
+                        <img src="images/footer2.jpg">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/20230420_102533.png" width="125px">
+                    <p>Our purpose is to make the pleasure and benefits of Stylish Clothing  Accessible to  many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affilitate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><i class="fa-brands fa-facebook"></i>Facebook</li>
+                        <li><i class="fa-brands fa-twitter"></i></i>Twitter </li>
+                        <li><i class="fa-brands fa-instagram"></i>Instagram</li>
+                        <li><i class="fa-brands fa-whatsapp"></i>Whats Up</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright @2023 By: Group-10 FA1 BSIT 1-2</p>
+        </div>
+     </div>
+<!-- js for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+    menuItems.style.maxHeight = "0px";
+  
+    function menuToggle() {
+      if (menuItems.style.maxHeight == "0px") {
+        menuItems.style.maxHeight = "200px";
+      } else {
+        menuItems.style.maxHeight = "0px";
+      }
+    }
+    </script>
+  
+</body>
+</html>

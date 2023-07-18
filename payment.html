@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="headers">
+        <div class="payment-container">
+            <div class="container-left">
+                <h3>BILLING ADDRESS</h3>
+                <form>
+                    Full Name
+                    <input type="text" name="" placeholder="Enter name">
+                    Email
+                    <input type="text" name="" placeholder="Enter email">
+                    Address
+                    <input type="text" name="" placeholder="Enter address">
+                    City
+                    <input type="text" name="" placeholder="Enter City">
+                    <div class="zip">
+                        <label>
+                            State
+                            <select>
+                                <option>Luzon</option>
+                                <option>Visayas</option>
+                                <option>Mindanao</option>
+                            </select>
+                        </label>
+                        <label>
+                            Zip code
+                            <input type="number" name="" placeholder="Zip code">
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="container-right">
+                <h3>PAYMENT</h3>
+                    <form>
+                        Accepted Card 
+                        <br>
+                        <img src="images/paypal_logo_icon_170865.png" width="15%">
+                        <img src="images/Maestro_logo.png" width="15%">
+                        <img src="images/bdo-logo-950x540.jpg" width="15%">
+                        <br>
+                        Card number
+                        <input type="number" name="" placeholder="Enter card number">
+
+                        Exp Month
+                        <input type="text" name="" placeholder="Enter Month">
+                        <div class="zip">
+                            <label>
+                                Exp Year
+                                <select>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                </select>
+                            </label>
+                            <label>
+                                CVV
+                                <input type="number" name="" placeholder="CVV">
+                            </label>
+                        </div>
+                    </form>
+                    <div class="container-popup">
+                        <button type="submit" class="btn1" onclick="openPopup()">Submit</button>
+                        <div class="pop-up" id="popup">
+                            <img src="images/Flat_tick_icon.svg.png" width="100px">
+                            <h2>Thank You</h2>
+                            <p>Your order has been successful. Thank you for choosing WanTo products.</p>
+                            <button type="button"><a href="index.html" onclick="closePopup()">OK</button></a>
+                        </div>
+                      </div>
+                 </div>
+            <!------js for popup---->
+                 <script>
+                    let popup = document.getElementById("popup");
+            
+                    function openPopup(){
+                        popup.classList.add("open-popup");
+                    }
+                    function closePopup(){
+                        popup.classList.remove("open-popup");
+                    }
+                 </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- js for toggle menu -->
+<script>
+    var menuItems = document.getElementById("menuItems");
+    menuItems.style.maxHeight = "0px";
+  
+    function menuToggle() {
+      if (menuItems.style.maxHeight == "0px") {
+        menuItems.style.maxHeight = "200px";
+      } else {
+        menuItems.style.maxHeight = "0px";
+      }
+    }
+  </script>
+  
+</body>
+</html>
